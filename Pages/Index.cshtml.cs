@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-//using var db = new WebApplication2.Models.ApplicationDbContext();
 using Google.Apis.CustomSearchAPI.v1;
 using Google.Apis.Services;
 using static WebApplication2.Models.ApplicationDbContext;

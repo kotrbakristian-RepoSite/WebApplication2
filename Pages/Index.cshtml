@@ -8,23 +8,23 @@
     
 
      
-        <form method="get" class="form-inline">
+        @*<form method="get" id="frm2" class="form-inline">
                 <div class="srchFrm">
                    
                     <input  type="text" name="filt" class="form-control" />
                     <button type="submit" class="btn ms-2 btn-outline-green">Pretraga</button>
                 </div>
-        </form>
+        </form>*@
 
-      <button ><a asp-page-handler="SomeStuff" class="nav-link text-dark">Do some stuff</a></button>
+      <button ><a asp-page-handler="SomeStuff" class="nav-link text-dark">Pretraži google za 'Sekom'</a></button>
 
 
       <table cellpadding="0" cellspacing="0">
         <tr>
-            <th>CustomerID</th>
-            <th>ContactName</th>
-            <th>City</th>
-            <th>Country</th>
+            <th>ID</th>
+            <th>Naslov</th>
+            <th>Html</th>
+            
         </tr>
         @foreach (Models.ApplicationDbContext.Rezultat customer in Model.Customers)
         {
