@@ -1,0 +1,41 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    
+
+     
+        <form method="get" class="form-inline">
+                <div class="srchFrm">
+                   
+                    <input  type="text" name="filt" class="form-control" />
+                    <button type="submit" class="btn ms-2 btn-outline-green">Pretraga</button>
+                </div>
+        </form>
+
+      <button ><a asp-page-handler="SomeStuff" class="nav-link text-dark">Do some stuff</a></button>
+
+
+      <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>CustomerID</th>
+            <th>ContactName</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        @foreach (Models.ApplicationDbContext.Rezultat customer in Model.Customers)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Naslov</td>
+                <td>@customer.Html</td>
+              
+            </tr>
+        }
+    </table>
+
+      
+</div>

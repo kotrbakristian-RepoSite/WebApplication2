@@ -1,0 +1,18 @@
+USE [baza]
+GO
+
+/****** Object:  Table [dbo].[Rezultati]    Script Date: 15.01.2026 19:28:29 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Rezultati](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Naslov] [nvarchar](max) NULL,
+	[Html] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
