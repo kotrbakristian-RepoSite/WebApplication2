@@ -8,15 +8,16 @@
     
 
      
-        @*<form method="get" id="frm2" class="form-inline">
-                <div class="srchFrm">
-                   
-                    <input  type="text" name="filt" class="form-control" />
-                    <button type="submit" class="btn ms-2 btn-outline-green">Pretraga</button>
-                </div>
-        </form>*@
+        
 
-      <button ><a asp-page-handler="SomeStuff" class="nav-link text-dark">Pretraži google za 'Sekom'</a></button>
+
+      <form method="post">
+    <input type="text" name="val"> 
+    <input type="submit" name="pret" value="Pretraži pojam">
+    <br />
+    <input type="text" name="valF"> 
+    <input type="submit" name="pretF" value="Filter pojam">
+</form>
 
 
       <table cellpadding="0" cellspacing="0">
@@ -26,7 +27,8 @@
             <th>Html</th>
             
         </tr>
-        @foreach (Models.ApplicationDbContext.Rezultat customer in Model.Customers)
+        @if(Model.Customers != null)        
+        foreach (Models.ApplicationDbContext.Rezultat customer in Model.Customers)
         {
             <tr>
                 <td>@customer.Id</td>
